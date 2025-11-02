@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal-GPT: Judicial Intelligence Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-content">
+            <div class="logo-container">
+                <div class="logo-icon">⚖️</div>
+                <div class="logo-text">
+                    <h1>Legal-GPT</h1>
+                    <p>Judicial Intelligence Platform</p>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <a href="#consultation" class="nav-link active" data-section="consultation">Project</a>
+                <a href="#provisions" class="nav-link" data-section="provisions">Legal Provisions</a>
+                <a href="#cases" class="nav-link" data-section="cases">Landmark Cases</a>
+                <a href="#about" class="nav-link" data-section="about">About</a>
+            </nav>
+        </div>
+        <div class="header-decoration"></div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Consultation Section -->
+        <section id="consultation" class="content-section active">
+            <div class="section-header">
+                <h2>📋 Project Introduction</h2>
+                <p>Legal-GPT: Open Source AI Legal Assistant</p>
+            </div>
+            
+            <div class="project-intro-container">
+                <div id="project-content" class="project-content">
+                    <!-- Content will be dynamically loaded -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Legal Provisions Section -->
+        <section id="provisions" class="content-section">
+            <div class="section-header">
+                <h2>📜 US Legal Provisions</h2>
+                <p>Comprehensive Database of Federal Laws and Regulations</p>
+            </div>
+            
+            <div class="filter-panel">
+                <button class="filter-btn active" data-category="all">All Categories</button>
+                <button class="filter-btn" data-category="Constitutional Law">Constitutional Law</button>
+                <button class="filter-btn" data-category="Criminal Law">Criminal Law</button>
+                <button class="filter-btn" data-category="Civil Rights">Civil Rights</button>
+                <button class="filter-btn" data-category="Contract Law">Contract Law</button>
+                <button class="filter-btn" data-category="Tort Law">Tort Law</button>
+            </div>
+            
+            <div id="provisions-container" class="provisions-container">
+                <!-- Provisions will be dynamically loaded here -->
+            </div>
+        </section>
+
+        <!-- Landmark Cases Section -->
+        <section id="cases" class="content-section">
+            <div class="section-header">
+                <h2>⚖️ Landmark Supreme Court Cases</h2>
+                <p>Analysis of Significant Legal Precedents</p>
+            </div>
+            
+            <div id="cases-container" class="cases-container">
+                <!-- Cases will be dynamically loaded here -->
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="content-section">
+            <div class="about-container">
+                <div class="about-header">
+                    <h2>About Legal-GPT</h2>
+                </div>
+                <div class="about-content">
+                    <div class="about-section">
+                        <h3>Overview</h3>
+                        <p>Legal-GPT is a sophisticated AI-powered legal research and analysis platform designed to provide comprehensive legal intelligence. Built on advanced language models fine-tuned for legal applications, this platform combines cutting-edge artificial intelligence with extensive legal knowledge databases.</p>
+                    </div>
+                    
+                    <div class="about-section">
+                        <h3>Features</h3>
+                        <div class="features-grid">
+                            <div class="feature-card">
+                                <div class="feature-icon">🔍</div>
+                                <h4>Legal Consultation</h4>
+                                <p>Interactive legal question answering with AI-powered analysis</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">📜</div>
+                                <h4>Legal Provisions</h4>
+                                <p>Comprehensive database of US Constitutional and Federal provisions</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">⚖️</div>
+                                <h4>Landmark Cases</h4>
+                                <p>Analysis of significant Supreme Court decisions and precedents</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">🧠</div>
+                                <h4>AI Intelligence</h4>
+                                <p>Advanced language models fine-tuned for legal applications</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-section">
+                        <h3>Technology</h3>
+                        <ul class="tech-list">
+                            <li><strong>Base Model:</strong> LLaMA architecture</li>
+                            <li><strong>Fine-tuning:</strong> LoRA (Low-Rank Adaptation)</li>
+                            <li><strong>Framework:</strong> PyTorch & Transformers</li>
+                            <li><strong>Frontend:</strong> Modern HTML5, CSS3, JavaScript</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="about-section disclaimer">
+                        <h3>⚠️ Important Disclaimer</h3>
+                        <p>This system is designed for <strong>educational and research purposes only</strong>. The information provided should not be construed as legal advice. Users should consult qualified legal professionals for legal advice regarding their specific circumstances.</p>
+                        <p><strong>Terms of Use:</strong> By using this platform, users acknowledge that:</p>
+                        <ul>
+                            <li>AI-generated content may contain errors or inaccuracies</li>
+                            <li>Legal interpretations require professional review</li>
+                            <li>The platform does not replace legal counsel</li>
+                            <li>Users assume responsibility for legal decisions based on platform output</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Legal-GPT. Built with precision for legal intelligence.</p>
+            <p>Powered by cutting-edge AI technology</p>
+        </div>
+    </footer>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="loading-overlay">
+        <div class="loading-spinner">
+            <div class="spinner-ring"></div>
+            <div class="spinner-ring"></div>
+            <div class="spinner-ring"></div>
+        </div>
+        <p>Analyzing legal query...</p>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <span id="toast-message"></span>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
