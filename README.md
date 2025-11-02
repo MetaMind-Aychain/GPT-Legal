@@ -1,8 +1,37 @@
 # Legal-GPT: Advanced Legal Language Model
 
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-blue)](https://github.com/MetaMind-Aychain/GPT-Legal)
+[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+
 ## Overview
 
-Legal-GPT is a sophisticated legal language model fine-tuned on legal corpora to provide intelligent legal question answering, case analysis, and legal provision interpretation. Built on top of LLaMA architectures with LoRA (Low-Rank Adaptation) fine-tuning, this system delivers precise legal insights with computational efficiency.
+Legal-GPT (AI Lawyer) is a sophisticated open-source legal language model fine-tuned on legal corpora to provide intelligent legal question answering, case analysis, and legal provision interpretation. Built on top of LLaMA architectures with LoRA (Low-Rank Adaptation) fine-tuning, this system delivers precise legal insights with computational efficiency.
+
+**🎉 This project is now open-source!** Pre-trained models are available in the `models/` folder. You can test the system by visiting [https://github.com/MetaMind-Aychain/GPT-Legal](https://github.com/MetaMind-Aychain/GPT-Legal).
+
+## Project Status
+
+✅ **Core Model**: Fine-tuned legal language model based on LLaMA architecture with LoRA  
+✅ **Training Pipeline**: Complete training infrastructure supporting instruction-based and causal language modeling  
+✅ **Inference System**: Robust inference engine with streaming support and configurable parameters  
+✅ **Web Interface**: Modern web interface built with Gradio and static HTML/CSS/JS  
+✅ **Legal Data Integration**: Comprehensive integration of US legal provisions and landmark cases  
+✅ **Pre-trained Models**: Model weights available in the `models/` folder for deployment
+
+## Quick Start
+
+```bash
+# Clone the repository
+git clone https://github.com/MetaMind-Aychain/GPT-Legal.git
+cd GPT-Legal
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Pre-trained models are located in the models/ folder
+# Use webapp.py to launch the enhanced web interface
+python webapp.py --base_model=models/base_models/your_model --lora_weights=models/lora_weights/your_lora
+```
 
 ## Features
 
@@ -44,8 +73,8 @@ Legal-GPT is a sophisticated legal language model fine-tuned on legal corpora to
 ### Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/your-org/Legal-GPT.git
-cd Legal-GPT
+git clone https://github.com/MetaMind-Aychain/GPT-Legal.git
+cd GPT-Legal
 ```
 
 ### Step 2: Install Dependencies
@@ -62,6 +91,9 @@ Download and prepare your base LLaMA model:
 # Place your base model in models/base_models/
 mkdir -p models/base_models
 # Follow Hugging Face model loading instructions
+
+# Or use pre-trained models from the models/ folder
+# Pre-trained model weights are available in models/lora_weights/
 ```
 
 ## Usage
@@ -206,10 +238,14 @@ Legal-GPT/
 ├── data/                   # Training and validation data
 ├── models/
 │   ├── base_models/       # Base model directories
-│   └── lora_weights/      # Fine-tuned LoRA adapters
+│   └── lora_weights/      # Fine-tuned LoRA adapters (pre-trained models available here)
 ├── outputs/               # Training outputs and checkpoints
 ├── resources/             # Resource files (vocabularies, examples)
 ├── scripts/               # Training and inference scripts
+├── static/                # Static web frontend (HTML, CSS, JS)
+│   ├── index.html        # Main frontend interface
+│   ├── styles.css        # Stylesheet
+│   └── app.js            # JavaScript logic
 ├── templates/             # Prompt templates
 ├── tools/                 # Utility tools
 ├── utils/                 # Utility modules
@@ -217,7 +253,7 @@ Legal-GPT/
 ├── train_clm.py          # Causal language modeling training
 ├── infer.py              # Inference script
 ├── webui.py              # Basic Gradio web interface
-├── webapp.py             # Enhanced web application
+├── webapp.py             # Enhanced web application (Gradio)
 └── requirements.txt      # Python dependencies
 ```
 
@@ -292,6 +328,16 @@ results = evaluate_model(
 - Use mixed precision training (FP16)
 - Optimize batch sizes for your hardware
 
+## Future Roadmap
+
+The following features are planned for future development:
+
+- **Enhanced Model Capabilities**: Expansion to support more legal domains, improved reasoning capabilities, and multi-lingual legal support
+- **Real-time Legal Updates**: Integration with legal databases for real-time updates on new cases, statutes, and regulatory changes
+- **Advanced Analytics**: Implementation of legal prediction models, case outcome analysis, and trend identification in legal systems
+- **API Services**: Development of RESTful API services for integration with legal practice management systems and legal research platforms
+- **Collaborative Features**: Support for multi-user collaboration, legal document sharing, and team-based legal research workflows
+
 ## Best Practices
 
 1. **Data Quality**: Ensure high-quality, diverse legal training data
@@ -327,7 +373,7 @@ If you use Legal-GPT in your research, please cite:
   title={Legal-GPT: Advanced Legal Language Model},
   author={Legal-GPT Contributors},
   year={2024},
-  url={https://github.com/your-org/Legal-GPT}
+  url={https://github.com/MetaMind-Aychain/GPT-Legal}
 }
 ```
 
@@ -341,10 +387,33 @@ For questions, issues, or contributions, please:
 
 ## Acknowledgments
 
-- Hugging Face for Transformers and PEFT libraries
-- Meta AI for the LLaMA architecture
+This project is built upon the following open-source projects. We express sincere gratitude to the related projects and developers:
+
+### Open Source Projects
+
+- **[Chinese-LLaMA-Alpaca](https://github.com/ymcui/Chinese-LLaMA-Alpaca)**: Chinese LLaMA & Alpaca LLMs
+- **[LLaMA](https://github.com/facebookresearch/llama)**: Meta AI's LLaMA language model
+- **[Alpaca](https://github.com/tatsu-lab/stanford_alpaca)**: Stanford Alpaca instruction-following language model
+- **[alpaca-lora](https://github.com/tloen/alpaca-lora)**: LoRA implementation for Alpaca
+- **[ChatGLM-6B](https://github.com/THUDM/ChatGLM-6B)**: ChatGLM-6B: An Open Bilingual Dialogue Language Model
+
+### Data Resources
+
+Additionally, this project is based on open data resources. Please refer to **Awesome American Legal Resources** for more information. We express our gratitude for these resources as well.
+
+### Libraries and Frameworks
+
+- **[Hugging Face](https://huggingface.co/)**: Transformers and PEFT libraries
+- **Meta AI**: LLaMA architecture
+- **PyTorch**: Deep learning framework
+- **Gradio**: Web interface framework
+
+### Community
+
 - The open-source legal data community
 - All contributors and users of this project
+
+We thank all the developers, researchers, and contributors who have made these excellent tools and resources available to the community.
 
 ---
 
